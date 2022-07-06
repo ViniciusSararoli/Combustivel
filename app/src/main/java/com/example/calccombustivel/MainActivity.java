@@ -8,17 +8,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText inputGasolina;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        inputGasolina = findViewById(R.id.inputGasolina);
     }
 
-    public void calcularPrecos(View v) {
+    public void calcularPrecos(View view) {
         float gasolina, etanol, resultado;
 
-        EditText inputGasolina = findViewById(R.id.inputGasolina);
         gasolina = Float.parseFloat(inputGasolina.getText().toString());
 
         EditText inputEtanol = findViewById(R.id.inputEtanol);
